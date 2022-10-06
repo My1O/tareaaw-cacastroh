@@ -1,0 +1,31 @@
+1 - Cree una vista de las que muestre un listado de los productos descontinuados. 
+Los productos (Production.Product) descontinuados son aquellos cuyo valor en DiscontinuedDate es distinto de NULL
+
+2 - Crea una vista que muestre un listado de productos (Production.Product) activos con sus respectivas categorías (Production.ProductCategory),
+ subcategorías (Production.ProductSubcategory) y modelo (Production.ProductModel). Deben mostrarse todos los productos activos aunque no tengan modelo asociado.
+
+3 - Crea una consulta que obtenga los datos generales de los empleados (HumanResources.Employee) del departamento (HumanResources.Department) ‘Document Control’.
+
+4 - Crea un procedimiento almacenado que obtenga los datos generales de los empleados por departamento.
+
+5 - Crea un procedimiento que obtenga lista de cumpleañeros del mes ordenados alfabéticamente por el primer apellido y por el nombre del departamento, 
+si no se especifica DepartmentID entonces deberá retornar todos los datos.
+
+6 - Crea un procedimiento que obtenga la cantidad de empleados por departamento ordenados por nombre de departamento, 
+si no se especifica DepartmentID entonces deberá retornar todos los datos.
+
+7 - Cree un procedimiento que obtenga retorne el Id del producto, nombre del producto, 
+cantidad total de ventas (Sales.SalesOrderDetail), monto total de ventas en un rango de fechas (Sales.SalesOrderHeader). 
+El procedimiento debe tener los parámetros @StartDate, @EndDate y 2 parámetros de retorno, los parámetros pueden ser nulos, 
+si no especifican las fechas deberá retornar los datos correspondientes al mes actual. El procedimiento debe validar que el rango de fechas sea válido, 
+si el rango es inválido deberá indicarse en los parámetros de retorno.
+
+8 - Cree una función que obtenga retorne el Id del producto, nombre del producto, cantidad total de ventas, monto total de ventas. 
+La función debe tener dos parámetros @StartDate y @EndDate, los parámetros pueden ser nulos, 
+si no especifican las fechas deberá retornar los datos correspondientes al mes actual.
+
+9 - Cree una función que obtenga retorne el Id del producto, nombre del producto, cantidad total de ventas, monto total de ventas de un año. 
+La función debe tener un parámetro @year, si no se especifica el año deberá retornar los datos correspondientes al año actual.
+
+10 - Cree una función que obtenga retorne el Id del producto, nombre del producto, cantidad total de ventas, monto total de ventas por mes en un año, 
+cada mes deberá ser una columna. La función debe tener un parámetro @year, si no se especifica el año deberá retornar los datos correspondientes al año actual.
