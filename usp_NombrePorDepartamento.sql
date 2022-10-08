@@ -4,7 +4,7 @@ SELECT * FROM HumanResources.Employee
 SELECT * FROM HumanResources.Department
 
 */
-Alter PROC usp_DatosEmpleados
+CREATE PROC usp_DatosEmpleados
 (
   @DepartmentName varchar(20)
 )
@@ -12,4 +12,4 @@ AS
 SELECT * FROM HumanResources.Employee WHERE JobTitle = @DepartmentName
 GO
 
-EXEC usp_DatosEmpleados 'Control Specialist'
+-- EXEC usp_DatosEmpleados 'Control Specialist'
