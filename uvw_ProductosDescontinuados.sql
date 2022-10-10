@@ -10,8 +10,8 @@ print 'Todos son nulls'
 */
 
 -- Vista de productos descontinuados
-Create VIEW ProductosDescontinuados
+ALTER VIEW ProductosDescontinuados
 AS
-SELECT ProductID, Name, DiscontinuedDate FROM Production.Product WHERE DiscontinuedDate IS NOT NULL
+SELECT ProductID, [Name], DiscontinuedDate FROM Production.Product WHERE DiscontinuedDate IS NOT NULL
 
 -- SELECT * FROM ProductosDescontinuados

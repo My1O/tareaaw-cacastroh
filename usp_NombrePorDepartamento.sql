@@ -6,10 +6,10 @@ SELECT * FROM HumanResources.Department
 */
 CREATE PROC usp_DatosEmpleados
 (
-  @DepartmentName varchar(20)
+  @DepartmentName varchar(60)
 )
 AS
 SELECT * FROM HumanResources.Employee WHERE JobTitle = @DepartmentName
 GO
 
--- EXEC usp_DatosEmpleados 'Control Specialist'
+-- EXEC usp_DatosEmpleados 'Janitor'
