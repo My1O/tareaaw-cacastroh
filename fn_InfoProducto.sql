@@ -4,7 +4,7 @@ La función debe tener dos parámetros @StartDate y @EndDate, los parámetros puede
 si no especifican las fechas deberá retornar los datos correspondientes al mes actual.
 ***************------------------*************************************------------------*************************************---
 */
-ALTER FUNCTION fn_InfoProductos (@StartDate char(8), @EndDate char(8))
+CREATE FUNCTION fn_InfoProductos (@StartDate char(8), @EndDate char(8))
 RETURNS @InfoProducto TABLE (IdProducto int, NombreProducto varchar(100),Cantidad int,Total Decimal(20,2), IdOrden int, FechaOrden varchar(20))
 AS
 BEGIN
@@ -23,7 +23,7 @@ BEGIN
 	ON SOD.ProductID = P.ProductID
 	INNER JOIN Sales.SalesOrderHeader SOH
 	ON SOH.SalesOrderID = SOD.SalesOrderID
-	WHERE(P.SellStartDate= GETDATE() AND P.SellEndDate= GETDATE())
+	WHERE(P.SellStartDate= MONTH(GETDATE()) AND P.SellEndDate= MONTH(GETDATE()))
 	RETURN
 END
 /*
