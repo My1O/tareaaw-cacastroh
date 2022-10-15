@@ -4,7 +4,7 @@ La función debe tener dos parámetros @StartDate y @EndDate, los parámetros puede
 si no especifican las fechas deberá retornar los datos correspondientes al mes actual.
 ***************------------------*************************************------------------*************************************---
 */
-ALTER FUNCTION fn_InfoProductos (@StartDate VARCHAR(20), @EndDate varchar(20))
+CREATE FUNCTION fn_InfoProductos (@StartDate char(8), @EndDate char(8))
 RETURNS @InfoProducto TABLE (IdProducto int, NombreProducto varchar(100),Cantidad int,Total Decimal(20,2), IdOrden int, FechaOrden varchar(20))
 AS
 BEGIN
